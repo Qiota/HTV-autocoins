@@ -1,28 +1,15 @@
-# HTV coins
-A simple script to claim htv coin rewards remotely. Basically a bash script ported from [here](#credits)
+Этот скрипт предназначен для автоматического получения наград в виде монет HTV. Он может быть запущен локально или как задача cron в рабочих процессах (workflows) на GitHub. Вот краткое описание того, как использовать его:
 
-## Running locally
-```sh
-git clone https://github.com/EverythingSuckz/htv-coins
-cd htv-coins
-chmod +x coins.sh "your-hanime-email" "your-hanime-password"
-./coins.sh
-```
-## Run as a cron job in workflows
+1. **Запуск локально:**
+   - Склонируйте репозиторий с помощью `git clone https://github.com/EverythingSuckz/htv-coins`.
+   - Перейдите в каталог скаченного репозитория: `cd htv-coins`.
+   - Установите права на выполнение скрипта: `chmod +x coins.sh`.
+   - Запустите скрипт с вашими данными электронной почты и паролем: `./coins.sh "ваш-адрес-электронной-почты" "ваш-пароль"`.
 
-- [Fork](https://github.com/EverythingSuckz/htv-coins/fork) this repo
-![fork image](https://i.imgur.com/i3FGwOv.png)
-- Goto `Settings` of your forked repository > `Secrets` which can be found on the side bar > `Actions`> `New Repository Secrets`.
-![settings image](https://i.imgur.com/n9XvGGv.png)
-![secrets tab image](https://i.imgur.com/aANpibr.png)
-- Set `HTV_EMAIL` and `HTV_PASSWORD` as secrets.
-![email image](https://i.imgur.com/JKbRJvl.png)
-![password image](https://i.imgur.com/Gtoedo0.png)
-- Enable workflows in the `Actions` tab in your forked repository.
-![actions tab image](https://i.imgur.com/UUo8Dkr.png)
-![accept actions image](https://i.imgur.com/bf8W44x.png)
-![enable workflow image](https://i.imgur.com/09bDt6C.png)
-> Using workflow is better because the script will auto run every 3 hours and auto-claim your rewards.
+2. **Запуск в рабочих процессах (workflows) на GitHub:**
+   - Сделайте форк репозитория [здесь](https://github.com/EverythingSuckz/htv-coins).
+   - Перейдите в настройки (Settings) вашего форкнутого репозитория, затем в раздел Secrets и создайте новые секреты `HTV_EMAIL` и `HTV_PASSWORD`, установив соответствующие значения.
+   - Включите рабочие процессы (workflows) в разделе Actions вашего форкнутого репозитория.
+   - Работа скрипта будет автоматизирована: он будет запускаться каждые 3 часа и автоматически получать ваши награды.
 
-## Credits
-- [hanime-auto-coins-collector](https://github.com/WeaveAche/hanime-auto-coins-collector)
+Этот скрипт был портирован из другого проекта, и его оригинальные исходники можно найти в репозитории [hanime-auto-coins-collector](https://github.com/WeaveAche/hanime-auto-coins-collector).
